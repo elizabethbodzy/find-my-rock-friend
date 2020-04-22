@@ -36,13 +36,19 @@ function FriendForm() {
     function addFriend(event) {
         // alert('hello')
         event.preventDefault();
-        console.log(name)
+        // console.log({
+        //     name,
+        //     canLeadClimb
+        // });
+
         fetch("http://localhost:3001/friend", {
             method: "POST",
             body: name
+
         }).then(function (response) {
             console.log(response)
         })
+        console.log(name)
         // console.log({ fullName: this.state.name })
 
     }
